@@ -1,0 +1,18 @@
+<script charset="utf-8">
+   let texte = document.getElementById('textAnimation').textContent;
+   var tab = texte.split("");
+   var timelooper;
+   
+   function loop()
+   {
+   if(tab.length > 0)
+   {
+   document.getElementById("animation_text").innerHTML += tab.shift();
+   }else
+   { 
+      clearTimeout(timelooper);
+   }
+   timelooper = setTimeout('loop()', 70);
+   }
+   loop();
+</script>

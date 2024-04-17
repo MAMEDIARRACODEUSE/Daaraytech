@@ -1,0 +1,44 @@
+RewriteEngine On
+
+#Accueil 
+RewriteRule ^admin$ indexAdmin.php
+RewriteRule ^home$ index.php
+
+#controller 
+RewriteRule ^contactController$ controller/contactController.php
+RewriteRule ^realisationController$ controller/realisationController.php
+RewriteRule ^serviceController$ controller/serviceController.php
+RewriteRule ^userController$ controller/userController.php
+
+
+#model
+RewriteRule ^contactBD$ model/contact_db.php
+RewriteRule ^realisationBD$ model/realisation_db.php
+RewriteRule ^serviceBD$ model/service_db.php
+RewriteRule ^userBD$ model/user_db.php
+
+#login
+RewriteRule ^login$ view/pages/admin/login/login.php
+RewriteRule ^logout$ view/pages/admin/login/dec.php
+
+#profil
+RewriteRule ^profil$ view/pages/admin/profil/profil.php
+
+
+#view => contact
+RewriteRule ^listeContact$ view/pages/admin/contact/contact.php
+ 
+
+#view => realisation
+RewriteRule ^listeRealisation$ view/pages/admin/realisation/realisation.php
+RewriteRule ^listeRealisationSupprimer$ view/pages/admin/realisation/corbeille.php
+
+
+#view => service
+RewriteRule ^listeService$ view/pages/admin/service/service.php
+RewriteRule ^listeServiceSupprimer$ view/pages/admin/service/corbeille.php
+
+
+#view => Utilisateur
+RewriteRule ^listeUser$ view/pages/admin/user/user.php
+RewriteRule ^listeUserSupprimer$ view/pages/admin/user/corbeille.php
